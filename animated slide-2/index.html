@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+</head>
+<body>
+
+    <img src="pic2.jpg" id="myimg" alt="photo" width="300" height="400">
+
+    <script>
+
+        let image = ['pic1.jpg','pic2.jpg','pic3.jpg'];
+        let MyImg = document.getElementById("myimg");
+        let count = -1;
+
+        // function myImage(){
+        //     count++;
+        //     if(count >= image.length){
+        //         count = 0;
+        //         MyImg.src = image[count];
+                
+        //     }
+        //     else{
+        //         MyImg.src = image[count];
+               
+        //     }
+        //     setTimeout("myImage()",5000)
+        // }
+        // window.onload = myImage();
+
+            //ES-6
+            let myImage = setInterval(() => {
+                count++;
+                if(count >= image.length){
+                    count = 0;
+                    MyImg.src = image[count];
+                    
+                }
+                else{
+                    MyImg.src = image[count];
+                
+                }
+            
+            },2000);
+
+       
+
+    </script>
+    
+</body>
+</html>
